@@ -1,9 +1,9 @@
 SELECT
-    courses.title AS course_title,
-    students.name AS student_name
+    courses.title
+    students.name
 FROM courses
 LEFT JOIN enrollments
-    ON courses.id = enrollments.course_id
+    ON enrollments.course_id = courses.id
 LEFT JOIN students
     ON enrollments.student_id = students.id
-ORDER BY courses_title ASC, students_name ASC;
+ORDER BY courses.title ASC, students.name ASC;
