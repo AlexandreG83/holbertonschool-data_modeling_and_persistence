@@ -3,7 +3,7 @@ SELECT
     students.name AS student_name
 FROM courses
 LEFT JOIN enrollments
-    ON enrollments.course_id = enrollments.course_id
+    ON courses.id = enrollments.course_id
 LEFT JOIN students
     ON enrollments.student_id = students.id
-ORDER BY courses.title ASC, students.name ASC;
+ORDER BY courses_title ASC, students_name ASC;
