@@ -4,4 +4,4 @@ SELECT
 FROM courses
 LEFT JOIN enrollments ON enrollments.course_id = courses.id
 GROUP BY courses.title
-ORDER BY enrollment_count DESC, courses_title ASC;
+ORDER BY enrollment_count DESC, course_title ASC;
